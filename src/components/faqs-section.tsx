@@ -54,7 +54,7 @@ const questions = [
 		id: "item-1",
 		title: "What is Gravity Hostel Management Platform?",
 		content:
-			"Gravity is a next-generation, AI-powered hostel management platform designed to streamline operations, automate billing, and enhance the resident experience. It is trusted by 500+ forward-thinking hostels including Taqwa, Rehmani, and Subhan hostels.",
+			"Gravity is a next-generation, AI-powered hostel management platform designed to streamline operations, automate billing, and enhance the resident experience. It is trusted by 500+ forward-thinking hostels including Taqwa, Gehmani, and Subhan hostels.",
 	},
 	{
 		id: "item-2",

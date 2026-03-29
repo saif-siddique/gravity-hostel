@@ -60,7 +60,7 @@ export function SpotlightPreview() {
             </Link>
           </Button>
         </div>
-
+{/* saifsiddiqueshikrani@gmail.com */}
         {/* Trust Indicators */}
         <div className="mt-16 flex flex-col items-center">
           <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4">Trusted by Hostel Leaders</p>
