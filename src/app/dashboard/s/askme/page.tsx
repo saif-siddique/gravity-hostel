@@ -277,7 +277,7 @@ export default function ChatInterface() {
                 {Object.entries(modelConfig).map(([key, config]) => (
                   <SelectItem key={key} value={key} className="py-2">
                     <div className="flex items-center gap-2">
-                      <config.icon className="w-3.5 h-3.5 text-blue-500" />
+                      {/* <config.icon className="w-3.5 h-3.5 text-blue-500" /> */}
                       <div>
                         <span className="font-medium">{config.label}</span>
                         <span className="text-muted-foreground text-xs ml-1.5 hidden sm:inline">
