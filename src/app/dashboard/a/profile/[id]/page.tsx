@@ -98,7 +98,7 @@ export default function StudentProfile({ params }: any) {
               <AvatarFallback className="text-2xl font-bold bg-muted text-foreground">
                 {student?.fullName
                   .split(" ")
-                  .map((n) => n[0])
+                  .map((n) => n[0].toUpperCase())
                   .join("")}
               </AvatarFallback>
             </Avatar>
