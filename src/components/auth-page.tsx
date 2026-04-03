@@ -182,7 +182,7 @@ export function AuthPage() {
           <Button disabled={isLoading} type="submit" form="login-form">
             {isLoading && <Loader2 className="animate-spin" />}Submit
           </Button>
-          <p className="mt-8 text-muted-foreground text-sm">
+          {/* <p className="mt-8 text-muted-foreground text-sm">
             By clicking continue, you agree to our{" "}
             <a
               className="underline underline-offset-4 hover:text-primary"
@@ -198,7 +198,12 @@ export function AuthPage() {
               Privacy Policy
             </a>
             .
+          </p> */}
+          <Link href={'/forget'}>
+          <p className="text-end font-light text-sm underline underline-offset-4 hover:text-gray-300 cursor-pointer">
+            Forget password
           </p>
+          </Link>
         </div>
       </div>
     </main>
