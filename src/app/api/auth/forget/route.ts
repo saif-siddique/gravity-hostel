@@ -2,7 +2,7 @@ import dbConnect from "@/connection/dbconnect";
 import SignupModel from "@/models/Signup.model";
 import { NextRequest } from "next/server";
 
-export async function GET(req: NextRequest, res: Response) {
+export async function GET(req: NextRequest): Promise<Response> {
     try {
         await dbConnect();
         const data = await req.nextUrl.searchParams;
@@ -38,4 +38,4 @@ export async function GET(req: NextRequest, res: Response) {
             { status: 400 }
         );
     }
-}
+} 

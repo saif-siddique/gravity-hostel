@@ -1,7 +1,7 @@
 import dbConnect from "@/connection/dbconnect";
 import SignupModel from "@/models/Signup.model";
 
-export async function POST (request: Request, response: Response) {
+export async function POST (request: Request) {
     await dbConnect();
     try {
         const { email, password } = await request.json();
