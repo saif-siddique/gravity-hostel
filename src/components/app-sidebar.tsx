@@ -13,6 +13,7 @@ import {
   IconBuilding,
   IconUserPlus,
   IconReceipt2,
+  IconToolsKitchen2,
 } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -65,6 +66,11 @@ const data = {
       icon: IconMessageDots,
     },
     {
+      title: "Mess",
+      url: "/dashboard/s/mess",
+      icon: IconToolsKitchen2
+    },
+    {
       title: "Ask me?",
       url: "/dashboard/s/askme",
       icon: IconMessageChatbot,
@@ -105,6 +111,11 @@ const data = {
       title: "Vouchers",
       url: "/dashboard/a/assign-voucher",
       icon: IconReceipt2,
+    },
+    {
+      title: "Mess",
+      url: "/dashboard/a/mess",
+      icon: IconToolsKitchen2,
     },
     {
       title: "Complaints",
