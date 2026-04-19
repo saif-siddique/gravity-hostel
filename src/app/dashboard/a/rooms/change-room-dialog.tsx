@@ -50,7 +50,7 @@ export function ChangeRoomDialog({ onSetupCompleted }: { onSetupCompleted?: () =
                 toast.error(response.message || "Failed to load requirements data");
             }
             setIsLoadingData(false);
-        } else {
+        } else { 
             // Reset state on close
             setSelectedStudentId("");
             setSelectedNewRoomId("");
