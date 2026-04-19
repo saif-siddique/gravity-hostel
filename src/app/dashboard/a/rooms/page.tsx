@@ -37,6 +37,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { ChangeRoomDialog } from "./change-room-dialog";
 
 // 1. Type for the individual occupant inside a room
 export interface Occupant {
@@ -175,12 +176,14 @@ export default function RoomManagement() {
             Manage hostel rooms and occupancy.
           </p>
         </div>
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button className="w-full sm:w-auto gap-2">
-              <Plus className="h-4 w-4" /> Add Room
-            </Button>
-          </DialogTrigger>
+        <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+          <ChangeRoomDialog onSetupCompleted={() => setChanged(!changed)} />
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="w-full sm:w-auto gap-2">
+                <Plus className="h-4 w-4" /> Add Room
+              </Button>
+            </DialogTrigger>
           <DialogContent className="sm:max-w-100 bg-card border-border p-0 overflow-hidden">
             <div className="p-6 space-y-6">
               <DialogHeader className="flex flex-row justify-between items-start">
@@ -276,6 +279,7 @@ export default function RoomManagement() {
             </div>
           </DialogContent>
         </Dialog>
+        </div>
       </div>
 
       <ScrollArea className="max-h-[70vh] w-full">
@@ -310,12 +314,12 @@ function RoomCard({ room }: { room: Room }) {
           <CardTitle className="text-xl font-bold">Room {room.id}</CardTitle>
           <p className="text-sm text-muted-foreground">{room.type}</p>
         </div>
-        <Badge
+        {/* <Badge
           variant="secondary"
           className="bg-emerald-500/10 text-emerald-500 border-none"
         >
           available
-        </Badge>
+        </Badge> */}
       </CardHeader>
 
       <CardContent className="space-y-6">

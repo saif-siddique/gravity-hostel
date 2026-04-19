@@ -35,8 +35,8 @@ export async function POST(request: Request) {
 
     if (!result.length) {
       return Response.json(
-        { success: false, message: "No rooms found" },
-        { status: 404 },
+        { success: true, rooms: [], message: "No rooms currently available" },
+        { status: 200 },
       );
     }
 
