@@ -25,6 +25,8 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import axios from "axios";
 import { toast } from "sonner";
+import { EditStudentDialog } from "./edit-student-dialog";
+import { DeleteStudentDialog } from "./delete-student-dialog";
 
 // 1. Helper functions defined OUTSIDE the component (Best Practice)
 const formatCurrency = (amount: number) => {
@@ -113,10 +115,23 @@ export default function StudentProfile({ params }: any) {
                     <Mail className="h-4 w-4" /> {student?.email}
                   </p>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex flex-row gap-2">
+                  {student && (
+                    <>
+                      <EditStudentDialog 
+                        studentId={id} 
+                        initialData={student} 
+                        onUpdated={fetchUserProfile} 
+                      />
+                      <DeleteStudentDialog 
+                        studentId={id} 
+                        studentName={student.fullName} 
+                      />
+                    </>
+                  )}
                   <Badge
                     variant={student?.isActive ? "default" : "destructive"}
-                    className="text-sm px-3 py-1"
+                    className="text-sm px-3 py-1 ml-auto"
                   >
                     {student?.isActive ? "Active Student" : "Inactive"}
                   </Badge>
